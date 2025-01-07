@@ -1,6 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selectors.withText;
@@ -11,13 +9,8 @@ import static org.openqa.selenium.By.linkText;
 
 public class StepsTest extends TestBase {
 
-    public static final String REPOSITORY = "polalove/QA_GURU_HW-3";
-    public static final int ISSUES = 1;
-
     @Test
-    void LambdaStepTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
+    void lambdaStepTest() {
         step("Открываем главуню страницу GitHub", () -> {
             open("");
         });
@@ -42,7 +35,6 @@ public class StepsTest extends TestBase {
 
     @Test
     public void annotatedStepTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         WebSteps steps = new WebSteps();
 
         steps.openMainPage();

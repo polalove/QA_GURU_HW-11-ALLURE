@@ -24,7 +24,7 @@ public class WebSteps extends TestBase {
         $(linkText(repo)).click();
     }
 
-    @Step("Открываем таб Issues + {repo}")
+    @Step("Открываем таб Issues")
     public void openIssuesTab() {
         $("#issues-tab").click();
     }

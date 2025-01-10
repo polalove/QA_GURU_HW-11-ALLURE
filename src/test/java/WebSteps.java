@@ -8,7 +8,7 @@ import static org.openqa.selenium.By.linkText;
 
 public class WebSteps extends TestBase {
 
-    @Step("Открываем главуню страницу GitHub")
+    @Step("Открываем главную страницу GitHub")
     public void openMainPage() {
         open("");
     }

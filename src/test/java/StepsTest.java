@@ -11,7 +11,7 @@ public class StepsTest extends TestBase {
 
     @Test
     void lambdaStepTest() {
-        step("Открываем главуню страницу GitHub", () -> {
+        step("Открываем главную страницу GitHub", () -> {
             open("");
         });
 
@@ -28,7 +28,7 @@ public class StepsTest extends TestBase {
             $("#issues-tab").click();
         });
 
-        step("Проверям наличие Issues с номером " + ISSUES, () -> {
+        step("Проверяем наличие Issues с номером " + ISSUES, () -> {
             $(withText("#" + ISSUES)).should(Condition.exist);
         });
     }
